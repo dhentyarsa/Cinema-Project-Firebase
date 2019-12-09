@@ -4,7 +4,7 @@ import { login } from '../redux/action'
 import Axios from 'axios'
 import { connect, } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import { MDBBtn } from 'mdbreact'
+import { MDBBtn, MDBInput } from 'mdbreact'
 
 class LogInPage extends Component {
     state = { 
@@ -53,7 +53,7 @@ class LogInPage extends Component {
                 margintop: '25px'
             }}>
                 <div className='container col-12' style={{color: 'black'}}>
-                    Username: <Input type='text' innerRef={(text) => this.text = text}></Input>
+                    <MDBInput label='Username' type='text' id='outline' inputRef={(text) => this.text = text}></MDBInput>
                     Password: <Input type='password' innerRef={(pass) => this.pass = pass}></Input>
                     <MDBBtn color='warning' onClick={this.loginUser} style={{marginTop: '25px'}}>
                         Log-in

@@ -162,7 +162,7 @@ render() {
                         }
                       </MDBDropdownToggle>
                         <MDBDropdownMenu className="dropdown-default">
-                        <MDBDropdownItem href="/">Admin Menu</MDBDropdownItem>
+                        <MDBDropdownItem href="/admin">Admin Menu</MDBDropdownItem>
                         <MDBDropdownItem href="/">Home</MDBDropdownItem>
                         <MDBDropdownItem divider></MDBDropdownItem>
                         <MDBDropdownItem onClick={this.onBtnLogout}>Log-Out</MDBDropdownItem>

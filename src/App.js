@@ -11,6 +11,8 @@ import { API_URL } from './helpers/apiUrl';
 import { login } from '../src/redux/action'
 import InputPage from './pages/testing';
 import Footer from './components/FooterBar';
+import ReserveSeats from './pages/reservation';
+import AdminPage from './pages/admin';
 
 
 class App extends Component {
@@ -39,6 +41,8 @@ class App extends Component {
             <Route path='/register' component={RegisterNewUser} />
             <Route path='/detail' component={MovieDetailPage} />
             <Route path='/test' component={InputPage} />
+            <Route path='/reservation' component={ReserveSeats} />
+            <Route path='/admin' component={AdminPage} />
             <Footer/>
         </div>
       </BrowserRouter>
