@@ -54,8 +54,8 @@ class LogInPage extends Component {
             }}>
                 <div className='container col-12' style={{color: 'black'}}>
                     <MDBInput label='Username' type='text' id='outline' inputRef={(text) => this.text = text}></MDBInput>
-                    Password: <Input type='password' innerRef={(pass) => this.pass = pass}></Input>
-                    <MDBBtn color='warning' onClick={this.loginUser} style={{marginTop: '25px'}}>
+                    <MDBInput label='Password' type='password' inputRef={(pass) => this.pass = pass}></MDBInput>
+                    <MDBBtn gradient='purple' onClick={this.loginUser} style={{marginTop: '25px'}}>
                         Log-in
                     </MDBBtn>
                 </div>

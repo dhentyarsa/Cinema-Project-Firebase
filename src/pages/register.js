@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { MDBBtn } from 'mdbreact';
+import { MDBBtn, MDBInput } from 'mdbreact';
 import { Input, Button } from 'reactstrap'
 import Axios from 'axios';
 import { API_URL } from '../helpers/apiUrl';
@@ -68,12 +68,12 @@ class RegisterNewUser extends Component {
                     Create your new Account below!
                 </h4>
                 <br/>
-                Username: <Input type='text' innerRef={(newuser) => this.newuser = newuser}></Input>
-                E-mail: <Input type='text' innerRef={(newemail) => this.newemail = newemail}></Input>
-                Password: <Input type='text' innerRef={(newpass) => this.newpass = newpass}></Input>
-                Confirm Password: <Input type='text' innerRef={(connewpass) => this.connewpass = connewpass}></Input>
+                <MDBInput type='text' label='Username' inputRef={(newuser) => this.newuser = newuser}></MDBInput>
+                <MDBInput type='text' label='E-mail' inputRef={(newemail) => this.newemail = newemail}></MDBInput>
+                <MDBInput type='text' label='Password' inputRef={(newpass) => this.newpass = newpass}></MDBInput>
+                <MDBInput type='text' label='Confirm Password' inputRef={(connewpass) => this.connewpass = connewpass}></MDBInput>
                 <br/>
-                    <MDBBtn color="dark" onClick={this.onBtnRegis}>
+                    <MDBBtn color="dark" gradient='blue' onClick={this.onBtnRegis}>
                         Sign-Up
                     </MDBBtn>
                 <div className='container m-auto justify-content-center p-5'>
