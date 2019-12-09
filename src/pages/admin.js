@@ -54,6 +54,10 @@ class AdminPage extends Component {
         })
     }
 
+    renderSynopis  = () => {
+        
+    }
+
     render() { 
         return ( 
             <div>
