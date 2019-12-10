@@ -54,9 +54,9 @@ class MovieDetailPage extends Component {
         if(genre){
             return genre.map((val,index) => {
                 return(
-                    <row style={{padding: '0px 5px 0px 0px'}}>
+                    
                         <MDBBtn color='info' key={index+5}>{val}</MDBBtn>
-                    </row>
+                    
                 )
             })
         }
@@ -68,11 +68,11 @@ class MovieDetailPage extends Component {
         let { data, redirectLogin, redirectPurchase } = this.state
         if(redirectLogin){
             return(
-                <Redirect to='/reservation'/>
+                <Redirect to={{ pathname:'/reservation', state: this.state.data }}/>
             )
         }else if(redirectPurchase){
             return(
-                <Redirect to='/register'/>
+                <Redirect to={'/register'}/>
             )
         }
         return ( 
