@@ -48,11 +48,9 @@ class LandingPage extends Component {
                 backgroundRepeat: 'no-repeat',
               }}>
                   <div>
-                      <Link to='/register'>
                         <div className='d-flex justify-content-center m-auto' style={{flexWrap:'wrap', border: 'none'}}>
                                 {this.renderMovieCard()}
                         </div>
-                      </Link>
                   </div>
                   <br/>
             </div>
