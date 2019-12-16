@@ -4,7 +4,8 @@ import { login } from '../redux/action'
 import Axios from 'axios'
 import { connect, } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import { MDBBtn, MDBInput } from 'mdbreact'
+import { MDBBtn, MDBInput, MDBIcon } from 'mdbreact'
+import Swal from 'sweetalert2'
 
 class LogInPage extends Component {
     state = { 
@@ -17,22 +18,28 @@ class LogInPage extends Component {
         if(username === '' || password === ''){
             alert('Fill in all the forms')
         }else{
-            Axios.get(`http://localhost:2000/users?username=${username}&password=${password}`, {
-                username,
-                password
-            })
-            .then((res) => {
-                if(res.data.length === 0){
-                    alert('username or password invalid')
-                }else{
-                    localStorage.setItem('username',username)
-                    this.props.login(res.data[0])
-                }
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+            this.props.login(username, password)
+            localStorage.setItem('username', username)
+            this.alertLogin()
         }
+    }
+    alertLogin = () => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            onOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
+          })
     }
 
     render() {
@@ -58,6 +65,7 @@ class LogInPage extends Component {
                     <MDBBtn rounded gradient='purple' type='button' className='p-3 col-12' onClick={this.loginUser} style={{marginTop: '25px'}}>
                         Log-in
                     </MDBBtn>
+                    <MDBIcon icon="square" />
                 </div>
             </div>    
         );

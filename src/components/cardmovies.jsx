@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardTitle, CardText } from 'reactstrap';
 import './cardmovies.css'
 import {Link} from 'react-router-dom'
 
@@ -13,10 +12,9 @@ const MovieCard = (props) => {
               <div className="flip-card-front border-none">
                 <img src={props.image} alt="Avatar" style={{width:"100%", height: "100%" }} />
               </div>
-              <div className="flip-card-back" style={{width:"100%", height: "100%", fontFamily: 'PT Mono, monospace', fontSize: '15px'}}>
+              <div className="flip-card-back" style={{width:"100%", height: "100%", fontFamily: 'Bebas Neue, cursive'}}>
                 <h1 className='pt-3' style={{fontWeight: '700'}}>{props.title}</h1>
-                <p className='' style={{flexWrap: 'wrap'}}>{props.desc}</p>
-                <p></p>
+                <p className='p-1' style={{flexWrap: 'wrap', fontSize: '20px'}}>{props.desc}</p>
               </div>
             </div>
           </div>

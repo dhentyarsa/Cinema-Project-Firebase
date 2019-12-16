@@ -3,6 +3,7 @@ import MovieCard from '../components/cardmovies';
 import Axios from 'axios'
 import { API_URL } from '../helpers/apiUrl'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 class LandingPage extends Component {
     state = { 
@@ -37,6 +38,8 @@ class LandingPage extends Component {
 
 
     render() { 
+        console.log(this.props.username)
+        console.log(this.props.password)
         return (
             <div style={{  
                 backgroundImage: "url(" + "https://cdn.dribbble.com/users/23161/screenshots/4283954/cinema-pattern.gif" + ")",
@@ -56,5 +59,13 @@ class LandingPage extends Component {
          );
     }
 }
+
+const mapStatetoProps = (state) => {
+    return {
+        username: state.user.username,
+        password: state.user.password,
+        role: state.user.role
+    }
+}
  
-export default LandingPage;
+export default connect( mapStatetoProps ) (LandingPage);

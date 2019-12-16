@@ -4,6 +4,7 @@ import { MDBBtn, MDBInput } from 'mdbreact'
 import { API_URL } from '../helpers/apiUrl'
 import { Button } from 'reactstrap'
 import { Modal, ModalHeader, ModalBody, ModalFooter, Input, Label } from 'reactstrap';
+import { textAlign } from '@material-ui/system';
 
 class AdminPage extends Component {
     state = { 
@@ -247,7 +248,7 @@ class AdminPage extends Component {
                         <MDBBtn outline color="danger" onClick={() => this.setState({openModal: false})}>Cancel</MDBBtn>
                     </ModalFooter>
                 </Modal>
-                <table className="table table-hover">
+                <table className="table table-hover" style={{border: '1px solid black', textAlign: 'center'}}>
                 <thead>
                     <tr>
                     <th scope="col">ID</th>

@@ -59,16 +59,6 @@ render() {
               </MDBNavbarNav>
               <MDBNavbarNav right>
                 <MDBNavItem>
-                  <MDBNavLink className="waves-effect waves-light" to="#!">
-                    <MDBIcon fab icon="twitter" />
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink className="waves-effect waves-light" to="#!">
-                    <MDBIcon fab icon="google-plus-g" />
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
                   <MDBDropdown>
                     <MDBDropdownToggle nav caret>
                       {
@@ -141,16 +131,6 @@ render() {
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
                   <MDBNavItem>
-                    <MDBNavLink className="waves-effect waves-light" to="#!">
-                      <MDBIcon fab icon="twitter" />
-                    </MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink className="waves-effect waves-light" to="#!">
-                      <MDBIcon fab icon="google-plus-g" />
-                    </MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
                     <MDBDropdown>
                       <MDBDropdownToggle nav caret>
                         {
@@ -213,16 +193,6 @@ render() {
                   </MDBNavItem>
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
-                  <MDBNavItem>
-                    <MDBNavLink className="waves-effect waves-light" to="#!">
-                      <MDBIcon fab icon="twitter" />
-                    </MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink className="waves-effect waves-light" to="#!">
-                      <MDBIcon fab icon="google-plus-g" />
-                    </MDBNavLink>
-                  </MDBNavItem>
                   <MDBNavItem>
                     <MDBDropdown>
                       <MDBDropdownToggle nav caret>
