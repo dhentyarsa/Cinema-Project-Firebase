@@ -37,7 +37,7 @@ class ReserveSeats extends Component {
         let alphabet = ['E', 'D', 'C', 'B', 'A']
         let seatnumber = []
             for(var i = 0; i<1; i++){
-                (seatnumber.reverse()).push(alphabet[arr[0]]+arr[1])
+                (seatnumber.push(alphabet[arr[0]]+arr[1]))
             }
             console.log(seatnumber)
             totalseatnumber.push(seatnumber)

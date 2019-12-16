@@ -65,7 +65,6 @@ class LogInPage extends Component {
                     <MDBBtn rounded gradient='purple' type='button' className='p-3 col-12' onClick={this.loginUser} style={{marginTop: '25px'}}>
                         Log-in
                     </MDBBtn>
-                    <MDBIcon icon="square" />
                 </div>
             </div>    
         );
